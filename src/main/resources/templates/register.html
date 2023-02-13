@@ -1,0 +1,15 @@
+<form th:action="@{/register}" th:object="${RegisterForm}" method = "POST" >
+<label >Choose a Professor:</label>
+
+<select id="profNo" name="profNo">
+  <option th:each="professor : ${professors}" th:value="${professor.profNo}" th:utext="${professor.profName}"></option>
+</select>
+
+<label >Choose a Course:</label>
+<select  id= "courseNo" name = "courseNo" > 
+  <option th:each="course : ${courses}" th:value="${course.courseNo}" th:utext="${course.courseName}"></option>
+</select>
+ <button>Đăng ký</button>
+</form>
+
+
